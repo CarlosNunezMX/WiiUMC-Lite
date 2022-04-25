@@ -1,0 +1,13 @@
+source/videos/**/**.mp4
+**.7z
+**.bnp
+**.pdf
+*.exe
+server-64
+server-32
+.nar
+node_modules
+anime_flv
+scrapper
+scrapper.js
+package-lock.json
