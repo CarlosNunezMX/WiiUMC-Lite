@@ -2,6 +2,7 @@ const express = require("express");
 const {readFiles} = require("./file.reader")
 const morgan = require("morgan");
 const { getLanguage } = require("./locales/locale");
+const { APIRouter } = require("./api/router");
 require("ejs")
 
 const app = express();
@@ -11,6 +12,7 @@ app.set("views" , __dirname + "/views");
 
 app.use(express.static(__dirname + "/public"))
 app.use("/videos", express.static(__dirname + "/videos"))
+app.use("/api", APIRouter)
 app.use(morgan("dev"));
 
 app.get("/", getLanguage, (req, res) => {

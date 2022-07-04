@@ -7,5 +7,10 @@
             "title": "Gracias al trabajo de los siguientes este proyecto es posible",
             "names": [{"name": "ExpressJS", "details": "Gracias a ellos se puede crear el servidor HTTP"}, {"name": "WiiUBrew", "details": "Documentación sobre las funciones del navegador"}]
         }
+    },
+
+
+    "API": {
+        "Message404": "Lo sentimos, el archivo no existe"
     }
 }

@@ -7,5 +7,8 @@
             "title": "Thanks for the following developers, for they this develoment is possible",
             "names": [{"name": "ExpressJS", "details": "NodeJS HTTP Server Framework"}, {"name": "WiiUBrew", "details": "WiiU Browser documentation."}]
         }
+    },
+    "API": {
+        "Message404": "We sorry, the file does not exits"
     }
 }
