@@ -1,0 +1,11 @@
+{
+    "backButton": "戻る",   
+    "putMessage": "ビデオを「videos」フォルダに入れます。フォルダとMP4ビデオが利用可能になりました。",
+    "about": {
+        "dev": "Carlos Nuñez 「カルロスヌニェズ」",
+        "cheers": {
+            "title": "以下の作業のおかげでこのプロジェクトが可能になります",
+            "names": [{"name": "ExpressJS", "details": "それらのおかげで、HTTPサーバーを作成できます"}, {"name": "WiiUBrew", "details": "ブラウザ機能に関するドキュメント"}]
+        }
+    }
+}

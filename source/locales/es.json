@@ -1,0 +1,11 @@
+{
+    "backButton": "Regresar",   
+    "putMessage": "Coloca tus videos en la carpeta \"videos\", por el momento las carpetas y los videos MP4 estan disponibles",
+    "about": {
+        "dev": "Carlos Nuñez",
+        "cheers": {
+            "title": "Gracias al trabajo de los siguientes este proyecto es posible",
+            "names": [{"name": "ExpressJS", "details": "Gracias a ellos se puede crear el servidor HTTP"}, {"name": "WiiUBrew", "details": "Documentación sobre las funciones del navegador"}]
+        }
+    }
+}

@@ -1,6 +1,7 @@
 const express = require("express");
 const {readFiles} = require("./file.reader")
 const morgan = require("morgan");
+const { getLanguage } = require("./locales/locale");
 require("ejs")
 
 const app = express();
@@ -12,7 +13,7 @@ app.use(express.static(__dirname + "/public"))
 app.use("/videos", express.static(__dirname + "/videos"))
 app.use(morgan("dev"));
 
-app.get("/", (req, res) => {
+app.get("/", getLanguage, (req, res) => {
     let up = req.query.route
     if(!up){
         up = ""
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
     }
 
     res.render("files", {
+        lang: req.lang,
         files: readFiles(up)
     })
 })

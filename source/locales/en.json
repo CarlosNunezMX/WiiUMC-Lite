@@ -1,0 +1,11 @@
+{
+    "backButton": "Back",
+    "putMessage": "Put your videos on the folder \"videos\", currently folders and MP4 are allowned.",
+    "about": {
+        "dev": "Carlos Nuñez",
+        "cheers": {
+            "title": "Thanks for the following developers, for they this develoment is possible",
+            "names": [{"name": "ExpressJS", "details": "NodeJS HTTP Server Framework"}, {"name": "WiiUBrew", "details": "WiiU Browser documentation."}]
+        }
+    }
+}
