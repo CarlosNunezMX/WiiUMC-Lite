@@ -2,17 +2,16 @@
 WiiUMC Lite is an experimental WiiU Media Server, this shows your videos of your PC from your NetWork, with an WiiU Intefarce Optimized.
 
 ## Todo's
-[x] Scan an Directory and Separate Videos, Folders and Normal Files.
-    - [] Add Multiple directory's for scanning.
-- [] Research WiiU Web Browser Compatible Format's
-- [] Add Music Support
-- [] Add Image Viewer Support
-- [] Add configurations
-- [] Create a WiiU Application
-    Note it be a long time, because i don't know how to program in C/C++
+- [x] Scan an Directory and Separate Videos, Folders and Normal Files.
+  - [ ] Add Multiple directory's for scanning.
+- [ ] Research WiiU Web Browser Compatible Format's
+- [ ] Add Music Support
+- [ ] Add Image Viewer Support
+- [ ] Add configurations
+- [ ] Create a WiiU Application. *Note it be a long time, because i don't know how to program in C/C++*
 - [-] Make a REST-API
-    - [] Create another client's
-- [] Add custom online video list support
+    - [ ] Create another client's
+- [ ] Add custom online video list support
 
 ## Using
 First you need installed in your PC **Node.JS**

@@ -3,6 +3,7 @@ const {readFiles} = require("./file.reader")
 const morgan = require("morgan");
 const { getLanguage } = require("./locales/locale");
 const { APIRouter } = require("./api/router");
+const addons = require("./api/addon.handler")
 require("ejs")
 
 const app = express();
@@ -14,25 +15,9 @@ app.use(express.static(__dirname + "/public"))
 app.use("/videos", express.static(__dirname + "/videos"))
 app.use("/api", APIRouter)
 app.use(morgan("dev"));
-
+app.use("/addons", addons.router);
 app.get("/", getLanguage, (req, res) => {
-    let up = req.query.route
-    if(!up){
-        up = ""
-    }
-
-    let type = req.query.type || "folder";
-    let name = req.query.name || "Raiz"
-    if(type === "mp4"){
-        return res.render("view", {video: up, name});
-    }
-
-    res.render("files", {
-        lang: req.lang,
-        files: readFiles(up)
-    })
+    res.sendFile(__dirname + "/views/index.html")
 })
-
-
 
 app.listen(3000 , () => console.log("Running on 3000"))

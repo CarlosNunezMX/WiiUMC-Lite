@@ -41,7 +41,7 @@ const readFiles = (scan) => {
             }
             return {
                 name: fileName,
-                type: "mp4",
+                type: "video",
                 path: `${filePath.split("videos/")[1]}`
             }
         }else if(file.isDirectory()){
