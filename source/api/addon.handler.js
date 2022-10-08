@@ -1,8 +1,4 @@
-const Fembed = require("../addons/Fembed/index");
-const Movies = require("../addons/Movies/index");
-const proxy  = require("../addons/proxy/router")
-const rokuAddon = require("../addons/roku/index")
-const addons = [Fembed, Movies, proxy, rokuAddon];
+const addons = [];
 const {Router} = require("express");
 const AddonRouter = Router();
 // 1520.706 1520.706
