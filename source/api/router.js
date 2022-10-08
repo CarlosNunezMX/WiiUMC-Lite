@@ -23,12 +23,14 @@ APIRouter.get("/directory", (req, res) => {
         response.push({
             name: e.name,
             type: e.type,
-            path: "/addons/" + e.name
+            path: "/addons/" + e.name,
+            description: e.description,
         })
     });
 
-    const final = readFiles(up).concat(response);
-    return res.status(200).json( final);
+    let final = readFiles(up).concat(response);
+    final = final.filter((value) => value.name !== 'dummy')
+    return res.status(200).json( final );
 })
 
 APIRouter.get("/file", getLanguage, (req, res)=>{

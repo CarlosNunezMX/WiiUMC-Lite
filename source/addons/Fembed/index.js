@@ -23,7 +23,22 @@ const getFetchHeader = async (headers) => {
     }
     return data
 }
+fembedRouter.get("/max",async (req, res) => {
+    const {id} = req.query
+    	if(!id){
+        	return res.status(404)
+    	}	
+        const sources = await fembed(id)
+        
+	const source = sources.data[sources.data.length - 1]
+    return await fetch(source.file, { headers: { range: req.headers.range } }).then(async response => {
+        if (!response.ok) return res.status(404).json({ success: false })
+        res.set(await getFetchHeader(response.headers))
 
+        response.body.pipe(res.status(206))
+        response.body.on('error', () => { })
+    })
+})
 fembedRouter.get("/proxy", async (req, res) => {
     console.log(req.query);
     if(req.query.type === "image"){
@@ -49,5 +64,6 @@ module.exports = {
 	name: "fembed",
 	description: "Fembed handler",
 	type: "API",
-    router: fembedRouter
+    router: fembedRouter,
+    form: {}
 }	

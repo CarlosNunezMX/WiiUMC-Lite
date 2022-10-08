@@ -29,7 +29,7 @@ Fetch.prototype.get = function(url, object, callback){
 
 
 Fetch.prototype.endPoints = {
-    directorys: "/api/directory/",
-    files: '/api/file',
-    addons: "/addons/" 
+    directorys: "http://192.168.100.175:3000/api/directory/",
+    files: 'http://192.168.100.175:3000/api/file',
+    addons: "http://192.168.100.175:3000/addons/" 
 }

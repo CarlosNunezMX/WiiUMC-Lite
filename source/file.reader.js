@@ -21,12 +21,17 @@ function parse({route, out}){
     }
 }
 const readFiles = (scan) => {
+    scan = scan ? scan : "/"
     let dir;
+    let before;
     if(scan !== "/"){
         dir = path.resolve(videoPath, scan)
+        before = scan.slice(0, before.length - 1).join("/")
+        console.log(before);
     }else{
         dir = videoPath
     }
+
     let files = fileReader.readdirSync(dir);
     let res = files.map((fileName)=>{
         let filePath = path.resolve(dir, fileName)
